@@ -273,7 +273,7 @@
             document.getElementById("submit-button").value = language == "pt" ? "Enviar" : "Submit"
             if (status == "offline") {
                 const message = document.createElement("h6")
-                message.innerHTML = language == "ms" ? "Mensagem" : "Message"
+                message.innerHTML = language == "pt" ? "Mensagem" : "Message"
                 message.id = "message-header"
                 document.getElementById("offline-message").appendChild(message)
                 const messageBox = document.createElement("textarea")
@@ -286,7 +286,7 @@
                 document.getElementById("offline-message").appendChild(messageBox)
                 // messageBox.setAttribute("oninput", messageHandler());
                 const attachment = document.createElement("h6")
-                attachment.innerHTML = language == "ms" ? "Attachment" : "Attachment"
+                attachment.innerHTML = language == "pt" ? "Attachment" : "Attachment"
                 attachment.id = "attachment-header"
                 document.getElementById("offline-message").appendChild(attachment)
                 const attachmentInput = document.createElement("input")
@@ -511,7 +511,7 @@ var countriesArray = ["Malaysia"]
             const message = document.getElementById("user-message")
             if (message.value.length == 0) {
                 // message.classList.add('invalid-placeholder');
-                document.getElementById("invalid-message").innerHTML = language == "ms" ? "Uma mensagem deve ser enviada para se conectar a um agente" : "A message should be sent to connect to an agent"
+                document.getElementById("invalid-message").innerHTML = language == "pt" ? "Uma mensagem deve ser enviada para se conectar a um agente" : "A message should be sent to connect to an agent"
             }
             else {
                 // message.classList.remove("invalid-placeholder");
@@ -559,7 +559,7 @@ var countriesArray = ["Malaysia"]
                     email.focus();
                 }
                 else if (!emailRegex.test(data.email)) {
-                    document.getElementById("invalid-message").innerHTML = language == "ms" ? "É necessário um e-mail válido para conectar um agente" : "Valid email is required to connect an agent"
+                    document.getElementById("invalid-message").innerHTML = language == "pt" ? "É necessário um e-mail válido para conectar um agente" : "Valid email is required to connect an agent"
                     email.placeholder = language == "pt" ? 'É necessário um e-mail válido para conectar um agente' : "Valid email is required to connect an agent"
                     name.classList.remove("invalid-placeholder");
                     phone.classList.remove("invalid-placeholder")
@@ -568,7 +568,7 @@ var countriesArray = ["Malaysia"]
                 }
 
                 else if(data.message.length == 0 ) {    //Added
-                    document.getElementById("invalid-message").innerHTML = language == "ms" ? "Uma mensagem deve ser enviada para se conectar a um agente " : "A message should be sent to connect to an agent"
+                    document.getElementById("invalid-message").innerHTML = language == "pt" ? "Uma mensagem deve ser enviada para se conectar a um agente " : "A message should be sent to connect to an agent"
                     message.placeholder = language == "pt" ? 'Uma mensagem deve ser enviada para se conectar a um agente ' : "A message should be sent to connect to an agent"
                     name.classList.add('invalid-placeholder');
                     email.classList.remove("invalid-placeholder");
