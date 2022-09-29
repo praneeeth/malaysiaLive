@@ -254,26 +254,26 @@
         }
     </style>
     <script>
-        var language = "ms"
+        var language = "pt"
         window.addEventListener('load', (event) => {
             console.log('page is fully loaded');
             let { lang, status } = Qs.parse(location.search, { ignoreQueryPrefix: true })
             language = lang
-            document.getElementById("title").innerHTML = language == "ms" ? "Sila isi butiran berikut untuk menghubungkan anda dengan pasukan Sokongan Pelanggan kami 😊" : "Please fill in the following details to connect you to our Customer Support team 😊"
-            document.getElementById("name-header").innerHTML = language == "ms" ? "Nama" : "Name"
-            document.getElementById("email-header").innerHTML = language == "ms" ? "Email" : "Email"
-            document.getElementById("phone-header").innerHTML = language == "ms" ? "Nombor telefon" : "Mobile Number"
-            document.getElementById("payment-header").innerHTML = language == "ms" ? "Saluran pembarayan" : "Payment Channel"
-            document.getElementById("game-header").innerHTML = language == "ms" ? "Produk/Game" : "Product/Game"
-            document.getElementById("name").placeholder = language == "ms" ? "Sila masukkan nama anda" : "Please enter your name"
-            document.getElementById("email").placeholder = language == "ms" ? "Sila masukkan emel anda" : "Please enter your email"
-            document.getElementById("phone").placeholder = language == "ms" ? "Sila masukkan nombor telefon anda" : "Please enter your mobile number"
-            document.getElementById("product-option").innerHTML = language == "ms" ? "Sila pilih saluran pembayaran anda" : "Please select your payment channel"
-            document.getElementById("game-option").innerHTML = language == "ms" ? "Sila pilih permainan / produk anda" : "Please select your game/product"
-            document.getElementById("submit-button").value = language == "ms" ? "Serahkan" : "Submit"
+            document.getElementById("title").innerHTML = language == "pt" ? "Por favor, preencha os seguintes detalhes para para se conectar à nossa equipe de Suporte ao Cliente 😊" : "Please fill in the following details to connect you to our Customer Support team 😊"
+            document.getElementById("name-header").innerHTML = language == "pt" ? "Nome" : "Name"
+            document.getElementById("email-header").innerHTML = language == "pt" ? "Endereço de e-mail" : "Email"
+            document.getElementById("phone-header").innerHTML = language == "pt" ? "Nombor telefon" : "Mobile Number"
+            document.getElementById("payment-header").innerHTML = language == "pt" ? "Método de Pagamento" : "Payment Channel"
+            document.getElementById("game-header").innerHTML = language == "pt" ? "Jogo/Produto" : "Product/Game"
+            document.getElementById("name").placeholder = language == "pt" ? "Por favor, insira seu nome" : "Please enter your name"
+            document.getElementById("email").placeholder = language == "pt" ? "Por favor introduza o seu e-mail" : "Please enter your email"
+            document.getElementById("phone").placeholder = language == "pt" ? "Por favor, insira seu número de telefone" : "Please enter your mobile number"
+            document.getElementById("product-option").innerHTML = language == "pt" ? "Selecione seu canal de pagamento" : "Please select your payment channel"
+            document.getElementById("game-option").innerHTML = language == "pt" ? "Selecione seu jogo/produto" : "Please select your game/product"
+            document.getElementById("submit-button").value = language == "pt" ? "Enviar" : "Submit"
             if (status == "offline") {
                 const message = document.createElement("h6")
-                message.innerHTML = language == "ms" ? "mesej" : "Message"
+                message.innerHTML = language == "ms" ? "Mensagem" : "Message"
                 message.id = "message-header"
                 document.getElementById("offline-message").appendChild(message)
                 const messageBox = document.createElement("textarea")
@@ -305,18 +305,158 @@
         var totalSelection = []
         var count = 0
         var countrys = {
-            "Malaysia": ["Maxis","DiGi","Celcom","ePay","Bank Transfer Malaysia","Digi Prepaid Reload Card","Card Payment MY","Card Payments Malaysia","U Mobile","Grabpay Malaysia","Touch-NGo","Boost","Codacash MY","ShopeePay"]
+            "Brazil": ["Pagamento Via Cartão",
+"Pix",
+"Picpay",
+"Boleto",
+"Mercado Pago",
+"Paypal",
+"Transferência Bancária",
+"Ame Digital",
+"Codacash",
+"n/a"]
         }
 
         $(document).ready(function () {
-            var gamesArray = ["Ragnarok M Codapay new", "Island King", "IMO", "LIKEE", "VIVO", "Wesing", "Talkee", "SHAREit", "PUBG", "MLBB codapay MY", "Riley Cillian Partners", "Ragnarok X MY Codashop", "Tinder Direct top up", "Garena Shells Vouchers", "Free Fire Vouchers", "Call of Duty Mobile Vouchers", "Tinder Vouchers", "PUBG Mobile UC Vouchers", "Xbox Vouchers", "Nintendo Vouchers", "PSN Vouchers", "Steam Wallet Code", "One Punch Man Codashop", "Riot Games Codashop", "Mihoyo Codashop"];
-            var countriesArray = ["Malaysia"]
+var gamesArray = ["Aceking",
+"Ahlan",
+"Alchemy Stars",
+"Amor Amis",
+"APEX Legends Mobile",
+"Aptoide",
+"Arena Mania: Magic Heroes CCG",
+"Arena Of Valor",
+"Asphalt 9",
+"Avakin Life",
+"Azur Lane",
+"Badlanders",
+"Bagelcode",
+"Basketrio",
+"Bat Messenger",
+"Bermuda",
+"Bilhar Bola 8",
+"Bingo",
+"Blued",
+"Call Of Duty",
+"Captain Tsubasa: Dream Team",
+"Cardboard Clash",
+"Cave Shooter",
+"Chess Rush",
+"Contra Returns",
+"Crusader Kings III: Royal Court",
+"Crusaders Of Light",
+"Cyber Hunter",
+"Date A Live",
+"Diablo Immortal",
+"Dian Dian Le",
+"Dragon Brawlers Igg",
+"Electronicsoul",
+"Era of Celestials",
+"Face Poker",
+"Fashion Dream",
+"Fashion Fantasy",
+"Fincon",
+"Findchip",
+"Flyff",
+"Free Fire",
+"Funmela",
+"Gaga",
+"Game Of Sultans",
+"Genshin Impact",
+"Genshin Impact PC",
+"Gogo Live",
+"Grampus",
+"Gunship Battle Total Warfare",
+"Hago",
+"Haku",
+"Harry Potter",
+"Hero Evolved",
+"Hk Xinmo",
+"Idle Gog",
+"Idle Monster Go",
+"King",
+"Lamour",
+"Land Of Doran",
+"League of Legends",
+"League of Legends - Wild Rift",
+"Legacy of Discord",
+"Legends of Runeterra",
+"Liu Li",
+"Live.Me",
+"LivU",
+"Lords Mobile: Kingdom Wars",
+"Lost Sanctuary: Eternal Origin",
+"Ludo Club",
+"Metal Revolution",
+"Mico",
+"Miniclip",
+"Miracle M",
+"Mobile Legend Bang Bang",
+"Modern Combat 5",
+"Modern Strike Online",
+"Monsters & Puzzles",
+"n/a",
+"Naver Z Corp",
+"Nimo Tv",
+"Ninja Online",
+"Nj Interactive",
+"Omega Legends",
+"Omlet Arcade",
+"Pik Pik",
+"Planet9",
+"Pubg M",
+"Punishing: Gray Raven",
+"Ragnarok M",
+"Ride Out Heroes",
+"Rise Of Empires",
+"Roseland",
+"Saint Saiya",
+"Seeya",
+"Social App",
+"Sprite Fantasia",
+"Storm Arena",
+"Super Sus",
+"Sword And Magic",
+"Tales Of Knight",
+"The War Of Genesis: Battle Of Antaria",
+"Thetan Arena",
+"Tinder Direct Top Up",
+"Top Eleven",
+"Tumile",
+"Turbovpn",
+"VALORANT",
+"World War Heroes",
+"Xgame",
+"Yiyo",
+"Yubo Live",
+"Zepeto",
+"Zingplay",
+"Minecraft",
+"Ok Cupid Voucher",
+"PSN Gift Cards",
+"Pubg Mobile Uc Vouchers",
+"Roblox Voucher",
+"Spotify",
+"Tinder Voucher",
+"World Of Warships",
+"Xbox Game Pass Ultimate",
+"Xbox Voucher"]            
+var countriesArray = ["Malaysia"]
             $('#games').select2({
                 data: gamesArray
             });
 
             $('#country').select2({
-                data: ["Maxis","DiGi","Celcom","BitX Malaysia","ePay","Bank Transfer Malaysia","Digi Prepaid Reload Card","Card Payment MY","Card Payments Malaysia","U Mobile","Grabpay Malaysia","Touch-NGo","Boost","Codacash MY","ShopeePay"]
+                data: ["Pagamento Via Cartão",
+"Pix",
+"Picpay",
+"Boleto",
+"Mercado Pago",
+"Paypal",
+"Transferência Bancária",
+"Ame Digital",
+"Codacash",
+"n/a"]
             })
         });
 
@@ -334,7 +474,7 @@
             const name = document.getElementById("name")
             if (document.getElementById("name").value.length == 0) {
                 name.classList.add('invalid-placeholder');
-                document.getElementById("invalid-message").innerHTML = language == "ms" ? "Nama diperlukan untuk menghubungkan ejen!" : "Name is required to connect an agent!"
+                document.getElementById("invalid-message").innerHTML = language == "pt" ? "O nome é necessário para conectar um agente" : "Name is required to connect an agent!"
             }
             else {
                 name.classList.remove("invalid-placeholder");
@@ -346,7 +486,7 @@
             const email = document.getElementById("email")
             if (document.getElementById("email").value.length == 0) {
                 email.classList.add('invalid-placeholder');
-                document.getElementById("invalid-message").innerHTML = language == "ms" ? "Emel diperlukan untuk menghubungkan ejen!" : "Email is required to connect an agent!"
+                document.getElementById("invalid-message").innerHTML = language == "pt" ? "O e-mail é necessário para conectar um agente!" : "Email is required to connect an agent!"
             }
             else {
                 email.classList.remove("invalid-placeholder");
@@ -358,7 +498,7 @@
             const phone = document.getElementById("phone")
             if (document.getElementById("phone").value.length == 0) {
                 phone.classList.add('invalid-placeholder');
-                document.getElementById("invalid-message").innerHTML = language == "ms" ? "Nombor telefon diperlukan untuk menghubungkan ejen!" : "Phone number is required to connect an agent!"
+                document.getElementById("invalid-message").innerHTML = language == "pt" ? "Nombor telefon diperlukan untuk menghubungkan ejen!" : "Phone number is required to connect an agent!"
             }
             else {
                 phone.classList.remove("invalid-placeholder");
@@ -371,7 +511,7 @@
             const message = document.getElementById("user-message")
             if (message.value.length == 0) {
                 // message.classList.add('invalid-placeholder');
-                document.getElementById("invalid-message").innerHTML = language == "ms" ? "Mesej anda akan dihantar untuk berhubung dengan ejen" : "A message should be sent to connect to an agent"
+                document.getElementById("invalid-message").innerHTML = language == "ms" ? "Uma mensagem deve ser enviada para se conectar a um agente" : "A message should be sent to connect to an agent"
             }
             else {
                 // message.classList.remove("invalid-placeholder");
@@ -401,8 +541,8 @@
             // console.log(message.value, "Message value after submitting")
             if (data["payment-type"] === "null" || data.games === "null" || data.email.length == 0 || data.name.length == 0 || !emailRegex.test(data.email)) {
                 if (data.name.length == 0) {
-                    document.getElementById("invalid-message").innerHTML = language == "ms" ? "Nama diperlukan untuk menghubungkan ejen!" : "Name is required to connect an agent!"
-                    name.placeholder = language == "ms" ? 'Nama diperlukan untuk menghubungkan ejen!' : "Name is required to connect an agent"
+                    document.getElementById("invalid-message").innerHTML = language == "pt" ? "O nome é necessário para conectar um agente" : "Name is required to connect an agent!"
+                    name.placeholder = language == "pt" ? 'O nome é necessário para conectar um agente' : "Name is required to connect an agent"
                     name.classList.add('invalid-placeholder');
                     email.classList.remove("invalid-placeholder");
                     phone.classList.remove("invalid-placeholder")
@@ -410,8 +550,8 @@
                     name.focus();
                 }
                 else if (data.email.length == 0) {
-                    document.getElementById("invalid-message").innerHTML = language == "ms" ? "Emel diperlukan untuk menghubungkan ejen!" : "Email is required to connect an agent!"
-                    email.placeholder = language == "ms" ? 'Emel diperlukan untuk menghubungkan ejen!' : "Email is required to connect an agent"
+                    document.getElementById("invalid-message").innerHTML = language == "pt" ? "O e-mail é necessário para conectar um agente!" : "Email is required to connect an agent!"
+                    email.placeholder = language == "pt" ? 'O e-mail é necessário para conectar um agente!' : "Email is required to connect an agent"
                     email.classList.add('invalid-placeholder');
                     name.classList.remove("invalid-placeholder");
                     phone.classList.remove("invalid-placeholder")
@@ -419,8 +559,8 @@
                     email.focus();
                 }
                 else if (!emailRegex.test(data.email)) {
-                    document.getElementById("invalid-message").innerHTML = language == "ms" ? "E-mel yang sah diperlukan untuk menghubungkan ejen" : "Valid email is required to connect an agent"
-                    email.placeholder = language == "ms" ? 'E-mel yang sah diperlukan untuk menghubungkan ejen' : "Valid email is required to connect an agent"
+                    document.getElementById("invalid-message").innerHTML = language == "ms" ? "É necessário um e-mail válido para conectar um agente" : "Valid email is required to connect an agent"
+                    email.placeholder = language == "pt" ? 'É necessário um e-mail válido para conectar um agente' : "Valid email is required to connect an agent"
                     name.classList.remove("invalid-placeholder");
                     phone.classList.remove("invalid-placeholder")
                     message.classList.remove("invalid-placeholder")
@@ -428,8 +568,8 @@
                 }
 
                 else if(data.message.length == 0 ) {    //Added
-                    document.getElementById("invalid-message").innerHTML = language == "ms" ? "Mesej anda akan dihantar untuk berhubung dengan ejen " : "A message should be sent to connect to an agent"
-                    message.placeholder = language == "ms" ? 'Mesej anda akan dihantar untuk berhubung dengan ejen ' : "A message should be sent to connect to an agent"
+                    document.getElementById("invalid-message").innerHTML = language == "ms" ? "Uma mensagem deve ser enviada para se conectar a um agente " : "A message should be sent to connect to an agent"
+                    message.placeholder = language == "pt" ? 'Uma mensagem deve ser enviada para se conectar a um agente ' : "A message should be sent to connect to an agent"
                     name.classList.add('invalid-placeholder');
                     email.classList.remove("invalid-placeholder");
                     phone.classList.remove("invalid-placeholder")
@@ -559,28 +699,25 @@
                 <center>
                     <h6 id="title"
                         style="color: black;text-align: left;margin-bottom: 25px;margin-top: 10px;font-size: 12px;">
-                        Sila isi butiran berikut untuk menghubungkan anda dengan pasukan Sokongan Pelanggan kami 😊                    </h6>
+                        Por favor, aguarde, um de nossos agentes de Suporte ao Cliente te atenderá em breve 😊                   </h6>
                 </center>
             </div>
             <p id="invalid-message" style="color:hsl(0, 100%, 50%);padding-left: 3px;font-size: 12px;"></p>
             <div id="message"></div>
             <h6 id="name-header">
-                Nama<sup>*</sup>
+                Noma<sup>*</sup>
             </h6>
-            <input type="text" placeholder="Sila masukkan nama anda" class="input-field" id="name" name="name"
+            <input type="text" placeholder="Por favor, insira seu nome" class="input-field" id="name" name="name"
                 oninput="nameHandler()" required>
             <h6 id="email-header">
-                Email<sup>*</sup>
+                Endereço de e-mail<sup>*</sup>
             </h6>
-            <input type="email" placeholder="Sila masukkan emel anda" class="input-field" id="email" name="email"
+            <input type="email" placeholder="Por favor introduza o seu e-mail" class="input-field" id="email" name="email"
                 oninput="emailHandler()" required>
-            <h6 id="phone-header">
-                Nombor telefon<sup>*</sup>
-            </h6>
-            <input type="number" placeholder="Sila masukkan nombor telefon anda" class="input-field" id="phone"
-                name="phone">
+            
+            
             <h6 id="payment-header">
-                Saluran pembarayan<sup>*</sup>
+                Método de Pagamento<sup>*</sup>
             </h6>
             <select style="width: 96%;
             max-width: 96%;
@@ -594,7 +731,7 @@
             <!-- Pilih Saluran pembarayan yang Anda inginkan -->
             <br>
             <h6 id="game-header">
-                Produk/Game<sup>*</sup>
+                Jogo/Produto<sup>*</sup>
             </h6>
             <select style="width: 96%;
             max-width: 96%;
@@ -609,7 +746,7 @@
             <br>
             <div id="offline-message">
             </div>
-            <input type="button" value="Kirim" id="submit-button" onclick="submit()"
+            <input type="button" value="Enviar" id="submit-button" onclick="submit()"
                 style="max-width: 60%;margin: 15px auto;background-color: #385072;color: #ffffff"
                 class="btn btn-primary center" />
         </div>
